@@ -1,0 +1,22 @@
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.row > div {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    text-align: center;
+}
