@@ -7,10 +7,7 @@ let board = [
 
 let x, y;
 let player = "X";
-
-/*----- constants -----*/
-const firstDiag = board[1][1] != "" && (board[0][0] == board[1][1] && board[1][1] == board[2][2]);
-const secondDiag = board[1][1] != "" && (board[0][2] == board[1][1] && board[1][1] == board[2][0]);
+let firstDiag, secondDiag, leftVert, midVert, rightVert, topHoriz, midHoriz, botHoriz;
 
 /*----- cached element references -----*/
 let cells = document.getElementsByClassName("cell");
@@ -25,8 +22,8 @@ function handleClick(evt) {
         board[x][y] = player;
         player = player == "X" ? "O" : "X";
         render(evt, [x, y]);
-        console.log(player);
-        console.log(board);
+        // console.log(player);
+        // console.log(board);
         checkWin();
     }
 }
@@ -36,7 +33,22 @@ function render(evt, [x, y]) {
 }
 
 function checkWin() {
-    if (player && (firstDiag || secondDiag)) {
-        console.log("Winner is", player)
+    createConditions();
+    if (player === "O" && (firstDiag || secondDiag || leftVert || midVert || rightVert || topHoriz || midHoriz || botHoriz)) {
+        console.log("Winner is X")
+    } else if (player === "X" && (firstDiag || secondDiag || leftVert || midVert || rightVert || topHoriz || midHoriz || botHoriz)) {
+        console.log("Winner is O")
     }
 }
+
+function createConditions() {
+    firstDiag = board[1][1] !== "" && (board[0][0] === board[1][1] && board[1][1] === board[2][2]);
+    secondDiag = board[1][1] !== "" && (board[0][2] === board[1][1] && board[1][1] === board[2][0]);
+    leftVert = board[0][0] !== "" && (board[0][0] === board[1][0] && board[1][0] === board[2][0]);
+    midVert = board[0][1] !== "" && (board[0][1] === board[1][1] && board[1][1] === board[2][1]);
+    rightVert = board[0][2] !== "" && (board[0][2] === board[1][2] && board[1][2] === board[2][2]);
+    topHoriz = board[0][0] !== "" && (board[0][0] === board[0][1] && board[0][1] === board[0][2]);
+    midHoriz = board[1][0] !== "" && (board[1][0] === board[1][1] && board[1][1] === board[2][0]);
+    botHoriz = board[2][0] !== "" && (board[2][0] === board[2][1] && board[2][1] === board[2][2]);
+}
+
