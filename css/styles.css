@@ -2,7 +2,7 @@ body {
   width: 100%;
   height: 100%;
   /* background-color: rgb(21, 68, 23); */
-  background: url('../img/background.jpg')
+  background: url("../img/background.jpg");
 }
 
 .logo {
@@ -30,7 +30,8 @@ body {
   max-height: 200px;
   font-size: 60px;
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border: 1px solid black;
   justify-content: center;
   align-items: center;
@@ -39,13 +40,14 @@ body {
 
 .row .cell:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .cell.prim {
   background-color: rgb(128, 0, 0);
 }
 
-.cell.prim.active, 
+.cell.prim.active,
 .cell.sec.active {
   background-color: black;
   border: white 1px solid;
@@ -62,7 +64,8 @@ body {
 
 #message {
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: white;
   font-size: 20px;
@@ -75,10 +78,11 @@ body {
   color: white;
   padding: 10px;
   font-size: 25px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-#btn:hover { 
+#btn:hover {
   filter: invert(1);
   cursor: pointer;
 }
