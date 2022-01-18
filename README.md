@@ -8,7 +8,7 @@ Enjoy a classic game of Tic Tac Toe, constructed using HTML, CSS and Vanilla Jav
 
 ## Play the game
 
-![Link](/)
+![Link](https://www.martinnicola.com/tic_tac_toe)
 
 ## Technologies Used
 
