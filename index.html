@@ -9,25 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>TIC TAC TOE</h2>
+    <div class="logo-container">
+        <img class="logo" src="img/logo.png" />
+    </div>
     <div class="game-board">
         <div class="row">
-            <div class="cell" id="00"></div>
-            <div class="cell" id="01"></div>
-            <div class="cell" id="02"></div>
+            <div class="cell prim" id="00"></div>
+            <div class="cell sec" id="01"></div>
+            <div class="cell prim" id="02"></div>
         </div>
         <div class="row">
-            <div class="cell" id="10"></div>
-            <div class="cell" id="11"></div>
-            <div class="cell" id="12"></div>
+            <div class="cell sec" id="10"></div>
+            <div class="cell prim" id="11"></div>
+            <div class="cell sec" id="12"></div>
         </div>
         <div class="row">
-            <div class="cell" id="20"></div>
-            <div class="cell" id="21"></div>
-            <div class="cell" id="22"></div>
+            <div class="cell prim" id="20"></div>
+            <div class="cell sec" id="21"></div>
+            <div class="cell prim" id="22"></div>
         </div>
     </div>
-    <h4 id="message">Current player is X</h4>
-    <button id="btn">Reset</button>
+    <div class="message-container">
+        <h4 id="message">CURRENT PLAYER IS X</h4>
+    </div>
+    <div class="btn-container">
+        <button id="btn">RESET</button>
+    </div>
 </body>
 </html>

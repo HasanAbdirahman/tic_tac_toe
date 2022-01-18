@@ -45,10 +45,11 @@ function handleClick(evt) {
 }
 
 function render(evt, [x, y]) {
+    evt.target.classList.add('active');
     evt.target.innerHTML = board[x][y];
-    if (winner) {message.textContent = `Winner is ${winner}. Reset.`; return;}
-    if (numMoves == 9 && !winner) {message.textContent = "Draw. No Winner! Reset."; return;}
-    message.textContent = `Current player is ${player}`;
+    if (winner) {message.textContent = `WINNER IS ${winner}. RESET.`; return;}
+    if (numMoves == 9 && !winner) {message.textContent = "DRAW. NO WINNER! RESET."; return;}
+    message.textContent = `CURRENT PLAYER IS ${player}`;
 }
 
 function checkWin() {
@@ -81,6 +82,6 @@ function generateCondition(a, b, c) {
 
 function resetRender() {
     init();
-    Array.from(cells).forEach(cell => cell.textContent = "");
-    message.textContent = `Current player is ${player}`;
+    Array.from(cells).forEach(cell => {cell.textContent = ""; cell.classList.remove('active')});
+    message.textContent = `CURRENT PLAYER IS ${player}`;
 }
