@@ -6,6 +6,10 @@ Enjoy a classic game of Tic Tac Toe, constructed using HTML, CSS and Vanilla Jav
 
 ![Main Screen](img/main.png)
 
+## Play the game
+
+![Link](https://www.martinnicola.com/tic_tac_toe/)
+
 ## Technologies Used
 
 - HTML
@@ -16,6 +20,7 @@ Enjoy a classic game of Tic Tac Toe, constructed using HTML, CSS and Vanilla Jav
 
 - **Working CPU**
   - For now, the game is two player. However, I would like to add single player functionality by including a CPU.
+  
 - **Remote Two-Player Game**
   - I would like to add socket IO functionality in order to allow remote play between two players.
 
