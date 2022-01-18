@@ -18,3 +18,4 @@ Enjoy a classic game of Tic Tac Toe, constructed using HTML, CSS and Vanilla Jav
   - For now, the game is two player. However, I would like to add single player functionality by including a CPU.
 - **Remote Two-Player Game**
   - I would like to add socket IO functionality in order to allow remote play between two players.
+
